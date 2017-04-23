@@ -1,7 +1,9 @@
-﻿<html xmlns="http://www.w3.org/1999/xhtml">
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<meta charset="utf-8">
     <title>Subway Map</title>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="jquery.subwayMap-0.5.0.js"></script>
     <style type="text/css">
     body
@@ -49,37 +51,36 @@
  
     </style>
 </head>
-<body>
-    <div class="subway-map" data-columns="12" data-rows="10" data-cellSize="40" data-legendId="legend" data-textClass="text" data-gridNumbers="true" data-grid="false" data-lineWidth="8">
-        <ul data-color="#ff4db2" data-label="jQuery Widgets">          
-            <li data-coords="2,2" data-marker="interchange"><a href="http://jqueryui.com/demos/accordion/">Accordion</a></li>  
-            <li data-coords="4,2"><a href="http://jqueryui.com/demos/autocomplete/"><a href="http://jqueryui.com/demos/autocomplete/">Auto\ncomplete</a></li>  
-            <li data-coords="5,3" data-dir="E"></li>  
-            <li data-coords="5,7" data-marker="@station" data-labelPos="W"><a href="http://jqueryui.com/demos/slider/">Slider</a></li> <!-- marker-only node -->  
-            <li data-coords="6,4" data-dir="S" data-marker="interchange" data-markerInfo="h5"><a href="http://jqueryui.com/demos/datepicker/">Date\npicker</a></li>  
-            <li data-coords="7,4"></li>  
-            <li data-coords="7.15,8" data-marker="@station" data-labelPos="E"><a href="http://jqueryui.com/demos/dialog/">Dialog</a></li>  <!-- marker-only node, moved to the right by 0.15 -->
-            <li data-coords="8,3" data-dir="E"></li>  
-            <li data-coords="8,2"></li>  
-            <li data-coords="9,1" data-dir="N"></li>  
-            <li data-coords="10,2" data-dir="E" data-marker="interchange" data-labelPos="E"><a href="http://jqueryui.com/demos/button/">Button</a></li>  
-            <li data-coords="10,5"></li>  
-            <li data-coords="9,6" data-dir="S" data-marker="station"><a href="http://jqueryui.com/demos/progressbar/">Progress\nbar</a></li>  
-            <li data-coords="6,9"></li>  
-            <li data-coords="5,8" data-dir="W"></li>  
-            <li data-coords="5,7"></li>  
-            <li data-coords="4,6" data-dir="N"></li>  
-            <li data-coords="2,6"><a href="http://jqueryui.com/demos/tabs/">Tabs</a></li>  
+<body style="background-image: url('http://www.metrolisboa.pt/wp-content/uploads/2016/Diagrama-882x653.png'); background-size: auto; background-repeat: no-repeat;">
+    <div class="subway-map" data-columns="44" data-rows="30" data-cellSize="20" 
+    data-legendId="legend" data-textClass="text" data-gridNumbers="true" data-grid="true" data-lineWidth="6" style="background-color: transparent;">
+        <ul data-color="#5082C3" data-label="Linha Azul">
+        <li data-coords="10,9" data-labelPos="NW"><a href="http://example.com/">Reboleira</a></li>
+        <li data-coords="16,9"></li>
+        <li data-coords="33,26"></li>
+        <li data-coords="36,26" data-labelPos="S"><a href="http://example.com/">Santa Apolónia</a></li>
         </ul>
 
-        <ul data-color="#00ff00" data-label="jQuery Interactions" data-shiftCoords="0,-1">      
-            <li data-coords="2,6"></li> 
-            <li data-coords="2,5.9" data-marker="@interchange"> </li> <!-- marker-only node, moved up by 0.10 -->
-            <li data-coords="5,6" data-marker="@station" data-labelPos="N"><a href="http://jqueryui.com/demos/selectable/">Selectable</a></li>  
-            <li data-coords="6,6"></li>  
-            <li data-coords="7,3" data-marker="@station" data-labelPos="W"><a href="http://jqueryui.com/demos/resizeable/">Resizeable</a></li>  
-            <li data-coords="7,5" data-dir="E" data-marker="station" data-labelPos="E"><a href="http://jqueryui.com/demos/droppable/">Droppable</a></li>  
-            <li data-coords="7,1" data-marker="interchange" data-labelPos="W"><a href="http://jqueryui.com/demos/draggable/">Draggable</a></li>  
+        <ul data-color="#FAB914" data-label="Linha Amarela">
+        <li data-coords="27,23" data-labelPos="W"><a href="http://example.com/">Rato</a></li>
+        <li data-coords="28,22" data-dir="E"></li>
+        <li data-coords="28,4" data-labelPos="E"><a href="http://example.com/">Odivelas</a></li>    
+        </ul>
+
+        <ul data-color="#00A0A5" data-label="Linha Verde"> 
+        <li data-coords="30,26" data-labelPos="NW"><a href="http://example.com/">Cais do Sodré</a></li>  
+        <li data-coords="31,26"></li>
+        <li data-coords="32,25" data-dir="E"></li> 
+        <li data-coords="32,12"></li>
+        <li data-coords="31,11" data-dir="N"></li>
+        <li data-coords="26,11" data-labelPos="N"><a href="http://example.com/">Telheiras</a></li>
+        </ul>
+
+        <ul data-color="#E6196E" data-label="Linha Vermelha">  
+        <li data-coords="25,18" data-labelPos="W"><a href="http://example.com/">São Sebastião</a></li>  
+        <li data-coords="40,11" data-labelPos="N"><a href="http://example.com/">Oriente</a></li>    
+        <li data-coords="38,9" data-labelPos="N"><a href="http://example.com/">Moscavide</a></li>   
+        <li data-coords="34,9" data-labelPos="NW"><a href="http://example.com/">Aeroporto</a></li>  
         </ul>
 
     </div>
