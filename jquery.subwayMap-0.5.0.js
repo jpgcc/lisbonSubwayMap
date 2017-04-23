@@ -366,7 +366,8 @@ THE SOFTWARE.
 
         // Render text labels and hyperlinks
         var pos = "";
-        var offset = width + 4;
+        var offset = width + 2;
+        var offsetDiag = offset / 1.4142;
         var topOffset = 0;
         var centerOffset = "-50px";
         switch(data.labelPos.toLowerCase())
@@ -387,19 +388,19 @@ THE SOFTWARE.
                 pos = "text-align: center; margin:" + offset + "px 0 0 " + centerOffset;
                 break;
             case "se":
-                pos = "text-align: left; margin:" + offset + "px 0 0 " + offset + "px";
+                pos = "text-align: left; margin:" + offsetDiag + "px 0 0 " + offsetDiag + "px";
                 break;
             case "ne":
-                pos = "text-align: left; padding-left: " + offset + "px; margin: 0 0 " + offset + "px 0";
-                topOffset = offset * 2;
+                pos = "text-align: left; padding-left: " + offsetDiag + "px; margin: 0 0 " + offsetDiag + "px 0";
+                topOffset = offsetDiag * 2;
                 break;
             case "sw":
-                pos = "text-align: right; margin:" + offset + "px 0 0 -" + (100 + offset) + "px";
-                topOffset = offset;
+                pos = "text-align: right; margin:" + offsetDiag + "px 0 0 -" + (100 + offsetDiag) + "px";
+                topOffset = offsetDiag;
                 break;
             case "nw":
-                pos = "text-align: right; margin: -" + offset + "px 0 0 -" + (100 + offset) + "px";
-                topOffset = offset;
+                pos = "text-align: right; margin: -" + offsetDiag + "px 0 0 -" + (100 + offsetDiag) + "px";
+                topOffset = offsetDiag;
                 break;
         }
         var style = (textClass != "" ? "class='" + textClass + "' " : "") + "style='" + (textClass == "" ? "font-size:8pt;font-family:Verdana,Arial,Helvetica,Sans Serif;text-decoration:none;" : "") + "width:100px;" + (pos != "" ? pos : "") + ";position:absolute;top:" + (y + el.offset().top - (topOffset > 0 ? topOffset : 0)) + "px;left:" + (x + el.offset().left) + "px;z-index:3000;'";
