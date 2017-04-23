@@ -23,6 +23,7 @@
     .text {
         text-decoration: none;
         color: #142382;
+        font-size: 7pt;
     }
     
     #legend {
@@ -45,26 +46,39 @@
     
     body.debug-mode {
         background-image: url('http://www.metrolisboa.pt/wp-content/uploads/2016/Diagrama-882x653.png');
-        background-size: auto;
+        background-size: 1102px 816px;
         background-repeat: no-repeat;
     }
     </style>
 </head>
 
-<body>
-    <div class="subway-map" data-columns="44" data-rows="30" data-cellSize="20" data-legendId="legend" data-textClass="text" data-gridNumbers="true" data-grid="true" data-lineWidth="6" style="background-color: transparent;">
+<body class="">
+    <div class="subway-map" data-columns="44" data-rows="30" data-cellSize="25" data-legendId="legend" data-textClass="text" data-gridNumbers="true" data-grid="false" data-lineWidth="8" style="background-color: transparent;">
         <ul data-color="#5082C3" data-label="Linha Azul">
             <li data-coords="10,9" data-labelPos="NW"><a href="http://example.com/">Reboleira</a></li>
-            <li data-coords="16,9"></li>
+            <li data-coords="12,9" data-labelPos="S"><a href="http://example.com/">Amadora-Este</a></li>
+            <li data-coords="14,9" data-labelPos="N"><a href="http://example.com/">Alfornelos</a></li>
+            <li data-coords="16,9" data-labelPos="NE"><a href="http://example.com/">Pontinha</a></li> 
+            <li data-coords="17.5,10" data-labelPos="E" data-marker="@station"><a href="http://example.com/">Carnide</a></li>
+            <li data-coords="18.5,11" data-labelPos="E" data-marker="@station"><a href="http://example.com/">Colégio Militar-Luz</a></li> 
+            <li data-coords="19.75,12.25" data-labelPos="E" data-marker="@station"><a href="http://example.com/">Alto dos Moinhos</a></li> 
+            <li data-coords="21,13.5" data-labelPos="E" data-marker="@station"><a href="http://example.com/">Laranjeiras</a></li> 
+            <li data-coords="22,15" data-labelPos="NE" data-marker="@station"><a href="http://example.com/">Jardim Zoológico</a></li> 
+            <li data-coords="23.5,16.5" data-labelPos="SW" data-marker="@station"><a href="http://example.com/">Praça de Espanha</a></li>            
+            <li data-coords="26.5,19.5" data-labelPos="W" data-marker="@station"><a href="http://example.com/">Parque</a></li>
             <li data-coords="33,26"></li>
             <li data-coords="36,26" data-labelPos="S"><a href="http://example.com/">Santa Apolónia</a></li>
         </ul>
         <ul data-color="#FAB914" data-label="Linha Amarela">
             <li data-coords="27,23" data-labelPos="W"><a href="http://example.com/">Rato</a></li>
             <li data-coords="28,22" data-dir="E"></li>
+            <li data-coords="28,21" data-labelPos="W"><a href="http://example.com/">Marquês de Pombal</a></li>
+            <li data-coords="28,19.5" data-labelPos="E"><a href="http://example.com/">Picoas</a></li>
             <li data-coords="28,16.5" data-labelPos="W"><a href="http://example.com/">Campo Pequeno</a></li>
             <li data-coords="28,15" data-labelPos="W"><a href="http://example.com/">Entre Campos</a></li>
             <li data-coords="28,13" data-labelPos="W"><a href="http://example.com/">Cidade Universitária</a></li>
+            <li data-coords="28,9.5" data-labelPos="E"><a href="http://example.com/">Quinta das Conchas</a></li>
+            <li data-coords="28,8" data-labelPos="E"><a href="http://example.com/">Lumiar</a></li>
             <li data-coords="28,6.5" data-labelPos="E"><a href="http://example.com/">Ameixoeira</a></li>
             <li data-coords="28,5" data-labelPos="E"><a href="http://example.com/">Senhor Roubado</a></li>
             <li data-coords="28,4" data-labelPos="E"><a href="http://example.com/">Odivelas</a></li>
@@ -73,17 +87,25 @@
             <li data-coords="30,26" data-labelPos="NW"><a href="http://example.com/">Cais do Sodré</a></li>
             <li data-coords="31,26"></li>
             <li data-coords="32,25" data-dir="E"></li>
-            <li data-coords="32,12"></li>
+            <li data-coords="32,16" data-labelPos="E"><a href="http://example.com/">Areeiro</a></li>
+            <li data-coords="32,14" data-labelPos="E"><a href="http://example.com/">Roma</a></li>
+            <li data-coords="32,12" data-labelPos="E"><a href="http://example.com/">Alvalade</a></li>
             <li data-coords="31,11" data-dir="N"></li>
+            <li data-coords="28,11" data-labelPos="NE"><a href="http://example.com/">Campo Grande</a></li>
             <li data-coords="26,11" data-labelPos="N"><a href="http://example.com/">Telheiras</a></li>
         </ul>
         <ul data-color="#E6196E" data-label="Linha Vermelha">
-            <li data-coords="25,18" data-labelPos="W"><a href="http://example.com/">São Sebastião</a></li>
+            <li data-coords="25,18" data-labelPos="SW"><a href="http://example.com/">São Sebastião</a></li>
             <li data-coords="28,18" data-labelPos="NE"><a href="http://example.com/">Saldanha</a></li>
             <li data-coords="32,18" data-labelPos="SE"><a href="http://example.com/">Alameda</a></li>
             <li data-coords="34,18"></li>
-            <li data-coords="40,12"></li>
-            <li data-coords="40,11" data-labelPos="N"><a href="http://example.com/">Oriente</a></li>
+            <li data-coords="34.5,17.75" data-labelPos="W" data-marker="@station"><a href="http://example.com/">Olaias</a></li>
+            <li data-coords="35.5,16.75" data-labelPos="E" data-marker="@station"><a href="http://example.com/">Bela Vista</a></li>
+            <li data-coords="36.5,15.5" data-labelPos="E" data-marker="@station"><a href="http://example.com/">Chelas</a></li>
+            <li data-coords="37.5,14.2" data-labelPos="E" data-marker="@station"><a href="http://example.com/">Olivais</a></li> 
+            <li data-coords="39,13" data-labelPos="SE"><a href="http://example.com">Cabo Ruivo</a></li>
+            <li data-coords="40,12" data-dir="E"></li>
+            <li data-coords="40,11" data-labelPos="W"><a href="http://example.com/">Oriente</a></li>
             <li data-coords="40,10"></li>
             <li data-coords="39,9"></li>
             <li data-coords="38,9" data-labelPos="N"><a href="http://example.com/">Moscavide</a></li>

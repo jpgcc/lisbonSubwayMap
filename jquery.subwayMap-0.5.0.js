@@ -366,7 +366,7 @@ THE SOFTWARE.
 
         // Render text labels and hyperlinks
         var pos = "";
-        var offset = width + 2;
+        var offset = width + 4;
         var offsetDiag = offset / 1.4142;
         var topOffset = 0;
         var centerOffset = "-50px";
