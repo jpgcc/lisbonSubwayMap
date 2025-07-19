@@ -1,11 +1,11 @@
-﻿<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<html lang="pt" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="utf-8">
     <title>Subway Map</title>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" src="jquery.subwayMap-0.5.0.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://jpgcc.github.io/subwayMap/jquery.subwayMap-0.5.3.js"></script>
     <style type="text/css">
     body {
         font-family: 'Source Sans Pro', sans-serif;
@@ -25,6 +25,7 @@
         text-decoration: none;
         color: #142382;
         font-size: 7pt;
+        padding: 3px;
     }
     
     #legend {
@@ -46,7 +47,7 @@
     }
     
     body.debug-mode {
-        background-image: url('http://www.metrolisboa.pt/wp-content/uploads/2016/Diagrama-882x653.png');
+        background-image: url('https://www.metrolisboa.pt/wp-content/uploads/2024/07/DiagramadaRede_julho2024.png');
         background-size: 1147px 849px;
         background-repeat: no-repeat;
     }
@@ -54,8 +55,8 @@
 </head>
 
 <body class="">
-    <div class="subway-map" data-columns="44" data-rows="30" data-cellSize="26" data-legendId="legend" data-textClass="text" data-gridNumbers="true" data-grid="false" data-lineWidth="8" style="background-color: transparent;">
-        <ul data-color="#ddd" data-label="Comboios" data-reverseMarkers="defined">
+    <div class="subway-map" data-columns="44" data-rows="30" data-cellSize="26" data-legendId="legend" data-textClass="text" data-gridNumbers="true" data-grid="true" data-lineWidth="8" style="background-color: transparent;" data-reverseMarkers="false">
+        <ul data-color="#ddd" data-label="Comboios (linha de Cintura)" data-reverseMarkers="true">
             <li data-coords="10,9"></li> <!-- Reboleira -->
             <li data-coords="14,13" data-labelPos="W" data-marker="@station"><a href="http://example.com/">Benfica</a></li>
             <li data-coords="16,15"></li>
@@ -68,7 +69,20 @@
             <li data-coords="40,17" data-labelPos="E" data-dir="E"><a href="http://example.com/">Braço de Prata</a></li> <!-- Braço de Prata -->
             <li data-coords="40,11"></li> <!-- Oriente -->
             <li data-coords="40,7"></li> <!-- termino norte -->
-        </ul>   
+        </ul>
+        <ul data-color="#ddd" data-label="Comboios (linha de Sintra)" data-reverseMarkers="true">
+            <li data-coords="14,13"></li> <!-- Benfica -->
+            <li data-coords="19.5,19.5" data-labelPos="SW"><a href="http://example.com/">Campolide</a></li>
+            <li data-coords="24,23.5"></li> <!-- curva -->
+            <li data-coords="30.25,23.5" data-labelPos="SW"><a href="http://example.com/">Rossio (CP)</a></li>
+        </ul>
+        <ul data-color="#ddd" data-label="Comboios (linha de Cascais)" data-reverseMarkers="true">
+            <li data-coords="10,26"></li> 
+            <li data-coords="17.5,26" data-labelPos="N" data-marker="station"><a href="http://example.com/">Belém</a></li>
+            <li data-coords="21,26" data-labelPos="S" data-marker="station"><a href="http://example.com/">Alcântara-Mar</a></li>
+            <li data-coords="25,26" data-labelPos="S" data-marker="station"><a href="http://example.com/">Santos</a></li>
+            <li data-coords="30,26"></li>
+        </ul>
         <ul data-color="#5082C3" data-label="Linha Azul">
             <li data-coords="10,9" data-labelPos="NW"><a href="http://example.com/">Reboleira</a></li>
             <li data-coords="12,9" data-labelPos="S"><a href="http://example.com/">Amadora-Este</a></li>
@@ -79,11 +93,11 @@
             <li data-coords="19.75,12.25" data-labelPos="E" data-marker="@station"><a href="http://example.com/">Alto dos Moinhos</a></li> 
             <li data-coords="21,13.5" data-labelPos="E" data-marker="@station"><a href="http://example.com/">Laranjeiras</a></li> 
             <li data-coords="21.5,15" data-labelPos="NE" data-marker="@interchange" data-markerInfo="h2"><a href="http://example.com/">Jardim Zoológico</a></li> 
-            <li data-coords="23.5,16.5" data-labelPos="SW" data-marker="@station"><a href="http://example.com/">Praça de Espanha</a></li>            
+            <li data-coords="23.5,16.5" data-labelPos="SW" data-marker="@station" data-markerInfo="test"><a href="http://example.com/">Praça de Espanha</a></li>            
             <li data-coords="26.5,19.5" data-labelPos="W" data-marker="@station"><a href="http://example.com/">Parque</a></li>           
             <li data-coords="29,22.25" data-labelPos="NE" data-marker="@station"><a href="http://example.com/">Avenida</a></li>           
-            <li data-coords="30.25,23.5" data-labelPos="SW" data-marker="@station"><a href="http://example.com/">Restauradores</a></li>
-            <li data-coords="33,26"></li>
+            <li data-coords="30.25,23.5" data-labelPos="N" data-marker="@station"><a href="http://example.com/">Restauradores</a></li>
+            <li data-coords="33,26"></li> <!-- Baixa-Chiado -->
             <li data-coords="35,26" data-labelPos="N"><a href="http://example.com/">Terreiro do Paço</a></li>
             <li data-coords="37,26" data-labelPos="S"><a href="http://example.com/">Santa Apolónia</a></li>
         </ul>
@@ -118,6 +132,13 @@
             <li data-coords="28,11" data-labelPos="NE" data-marker="interchange"><a href="http://example.com/">Campo Grande</a></li>
             <li data-coords="26,11" data-labelPos="N"><a href="http://example.com/">Telheiras</a></li>
         </ul>
+        <ul data-dotted="true" data-color="#00A0A5" data-label="Linha Verde (Extensão)">
+            <li data-coords="27,23"></li> <!-- Rato -->
+            <li data-coords="25.5,24" data-labelPos="E" data-marker="station"><a href="http://example.com/">Estrela</a></li>
+            <li data-coords="25,25.5" data-labelPos="W" data-marker="station"><a href="http://example.com/">Santos</a></li>
+            <li data-coords="26.5,26"></li>
+            <li data-coords="30,26"></li> <!-- Cais do Sodré -->
+        </ul>    
         <ul data-color="#E6196E" data-label="Linha Vermelha">
             <li data-coords="25,18" data-labelPos="SW" data-marker="interchange"><a href="http://example.com/">São Sebastião</a></li>
             <li data-coords="28,18" data-labelPos="NE" data-marker="interchange"><a href="http://example.com/">Saldanha</a></li>
@@ -135,6 +156,14 @@
             <li data-coords="38,9" data-labelPos="N"><a href="http://example.com/">Moscavide</a></li>
             <li data-coords="36,9" data-labelPos="S"><a href="http://example.com/">Encarnação</a></li>
             <li data-coords="34,9" data-labelPos="NW"><a href="http://example.com/">Aeroporto</a></li>
+        </ul>
+        <ul data-dotted="true" data-color="#E6196E" data-label="Linha Vermelha (Extensão)">
+            <li data-coords="25,18"></li> <!-- São Sebastião -->
+            <li data-coords="24,19" data-labelPos="W" data-marker="station"><a href="http://example.com/">Campolide-Amoreiras</a></li>
+            <li data-coords="24,20" data-labelPos="W" data-marker="station"><a href="http://example.com/">Campo de Ourique</a></li>
+            <li data-coords="24,23" data-labelPos="W" data-marker="station"><a href="http://example.com/">Infante Santo</a></li>
+            <li data-coords="24,24"></li>
+            <li data-coords="21,26"></li> <!-- Alcantara -->
         </ul>
     </div>
     <div id="legend"></div>
